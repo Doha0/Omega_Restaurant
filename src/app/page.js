@@ -26,14 +26,14 @@ const page = async () => {
   console.log(groupedRestaurants);
 
   return (
-    <section className="max-w-6xl mx-auto my-20">
-      <h2 className="text-5xl font-bold text-center my-4 text-slate-950 hover:text-slate-800">Restaurant List:</h2>
+    <section className="container mx-auto my-20 px-4">
+      <h2 className="text-2xl md:text-5xl font-bold text-center my-4 text-slate-950 hover:text-slate-800">Restaurant List:</h2>
       {Object.keys(groupedRestaurants).map((location, index) => (
         <div key={index}>
-          <li className="text-3xl text-black font-bold my-6 list-disc">{location}:</li>
+          <li className="text-xl md:text-3xl text-black font-bold my-6 list-disc">{location}:</li>
           <ul>
             {groupedRestaurants[location].map((restaurant, index) => (
-              <li className="list-disc mx-20 my-2" key={index}>{restaurant}</li>
+              <li className="list-disc ml-10 md:ml-20 my-2" key={index}>{restaurant}</li>
             ))}
           </ul>
         </div>
